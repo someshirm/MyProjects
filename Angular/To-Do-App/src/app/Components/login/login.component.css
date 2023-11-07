@@ -1,0 +1,27 @@
+.container {
+  height: 500px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+
+input {
+  background-color: rgba(246, 233, 209, 0.807);
+  width: 300px;
+}
+
+#btnn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 280px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 234, 255, 0.886),
+    rgba(195, 72, 217, 0.88)
+  );
+  height: 35px;
+  color: whitesmoke;
+}

@@ -1,0 +1,91 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="main">
+    <form (ngSubmit)="submit()">
+      <div class="firstdiv">
+        <input
+          type="text"
+          name="taskName"
+          [(ngModel)]="task.taskName"
+          id="inpTask"
+          class="form-control"
+          placeholder="Add Task"
+        />
+      </div>
+      <div class="secdiv" style="width: 40px">
+        <input
+          type="date"
+          name="taskDate"
+          id=""
+          [(ngModel)]="task.taskDate"
+          class="form-control"
+          value=""
+          required="required"
+          title=""
+        />
+      </div>
+
+      <button type="submit" class="button">Add</button>
+    </form>
+  </div>
+
+  <div *ngIf="user.tasks.length > 0">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">TaskName</th>
+          <th scope="col">TaskDate</th>
+          <th scope="col">Important <fa-icon [icon]="icon"></fa-icon></th>
+          <th scope="col">Completed</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of usertasks; let i = index">
+        <tr>
+          <td>
+            <div *ngIf="item.isEdit">
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="item.taskName"
+              />
+            </div>
+            <div *ngIf="!item.isEdit">{{ item.taskName }}</div>
+          </td>
+          <td>
+            <div *ngIf="item.isEdit">
+              <input
+                type="date"
+                [(ngModel)]="item.taskDate"
+                class="form-control"
+              />
+            </div>
+            <div *ngIf="!item.isEdit">{{ item.taskDate }}</div>
+          </td>
+          <td>
+            <div *ngIf="!item.isImportant">
+              <button class="impCompleteButton" (click)="markAsImportant(i)">Important</button>
+            </div>
+            <div *ngIf="item.isImportant">Marked as Important</div>
+          </td>
+          <td>
+            <div *ngIf="!item.isCompleted">
+              <button class="impCompleteButton" (click)="markAsCompleted(i)">Complete</button>
+            </div>
+            <div *ngIf="item.isCompleted">Marked as Completed</div>
+          </td>
+          <td>
+            <div *ngIf="item.isEdit">
+              <button class="save" (click)="save(item, i)">Save</button>
+            </div>
+            <div *ngIf="!item.isEdit">
+              <button class="edit" (click)="editTask(i)">Edit</button
+              ><button class="del" (click)="deleteTask(i)">Delete</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

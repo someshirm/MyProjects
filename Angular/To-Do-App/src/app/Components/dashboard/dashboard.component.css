@@ -1,0 +1,63 @@
+input {
+  background-color: rgba(231, 155, 80, 0.153);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.firstdiv {
+  display: inline-block;
+  width: 500px;
+  margin: 0 10px;
+}
+.secdiv {
+  display: inline-block;
+  width: 50px;
+  margin: 0 10px;
+}
+
+.button {
+  width: 100px;
+  background-color: darkcyan;
+  border-radius: 10px;
+  color:  black
+}
+
+.del {
+  width: 80px;
+  background-color: rgb(205, 41, 8);
+  border-radius: 10px;
+  color:  black
+}
+.edit {
+  width: 80px;
+  background-color: rgb(154, 106, 159);
+  border-radius: 10px;
+  color:  black
+}
+.save {
+  width: 80px;
+  background-color: rgba(62, 208, 33, 0.753);
+  border-radius: 10px;
+  color:  black
+}
+
+.impCompleteButton{
+  width: 100px;
+  background-color: rgba(100, 118, 231, 0.881);
+  border-radius: 5px;
+  color: black
+}
+
+.button:hover {
+  background-color: cadetblue;
+}
+.firstdiv:hover {
+  background-color: cadetblue;
+}
+.secdiv:hover {
+  background-color: cadetblue;
+}
