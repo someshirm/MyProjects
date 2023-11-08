@@ -1,0 +1,22 @@
+h2{
+    color: brown;
+    text-align: center;
+    margin: 20px;
+}
+
+.container{
+    width: 500px;
+    border: 1px solid rgb(9, 115, 186);
+    border-radius: 10px;
+}
+
+button{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    align-self: center;
+    justify-items: center;
+}
+
+label{
+    margin-top: 10px;
+}

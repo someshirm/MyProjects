@@ -1,0 +1,14 @@
+.container{
+    width: 500px;
+    border-radius: 10px;
+    border: 0.002px solid rgb(119, 239, 239);
+}
+h2{
+    color: brown;
+    text-align: center;
+    margin: 20px;
+}
+
+button{
+    margin: 10px;
+}

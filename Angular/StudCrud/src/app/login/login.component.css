@@ -1,0 +1,31 @@
+.container{
+
+     margin-top: 20px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(9, 115, 186);
+    border-radius: 10px;
+     
+    
+}
+
+button{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    align-self: center;
+    justify-items: center;
+}
+
+legend{
+    font-weight: bold;
+    color: skyblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p{
+    color: red;
+}
